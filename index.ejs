@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Budget Tracker</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <h1>All Budgets</h1>
+  <ul>
+    <% budgets.forEach(budget => { %>
+      <li>
+        <%= budget.title %> - $<%= budget.amount %> 
+        <a href="/delete/<%= budget._id %>">Delete</a>
+      </li>
+    <% }) %>
+  </ul>
+  <a href="/add">Add New Budget</a>
+</body>
+</html>
